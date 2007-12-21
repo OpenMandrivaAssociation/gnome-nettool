@@ -10,6 +10,7 @@ Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://www.gnome.org/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libgnomeui2-devel
 BuildRequires: libglade2.0-devel
 BuildRequires: scrollkeeper
