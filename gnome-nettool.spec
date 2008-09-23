@@ -1,21 +1,21 @@
 %define name gnome-nettool
-%define version 2.22.0
-%define release %mkrel 3
+%define version 2.22.1
+%define release %mkrel 1
 
 Summary: GNOME interface for networking tools
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-License: GPL
+License: GPLv2+
 Group: Graphical desktop/GNOME
 Url: http://www.gnome.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libgnomeui2-devel
 BuildRequires: libglade2.0-devel
 BuildRequires: scrollkeeper
-BuildRequires:  gnome-doc-utils libxslt-proc
-BuildRequires:  perl-XML-Parser
+BuildRequires:  gnome-doc-utils
+BuildRequires:  intltool
 BuildRequires:  desktop-file-utils
 Conflicts: gnome-network <= 1.99.5
 Provides: gnome-netinfo
