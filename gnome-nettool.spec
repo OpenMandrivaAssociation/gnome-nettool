@@ -11,8 +11,9 @@ License: GPLv2+
 Group: Graphical desktop/GNOME
 Url: http://www.gnome.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: libgnomeui2-devel
+BuildRequires: libGConf2-devel
 BuildRequires: libglade2.0-devel
+BuildRequires: libgtop2.0-devel
 BuildRequires: scrollkeeper
 BuildRequires:  gnome-doc-utils
 BuildRequires:  intltool
