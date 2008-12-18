@@ -1,5 +1,5 @@
 %define name gnome-nettool
-%define version 2.22.1
+%define version 2.25.3
 %define release %mkrel 1
 
 Summary: GNOME interface for networking tools
