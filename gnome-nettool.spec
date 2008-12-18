@@ -18,6 +18,8 @@ BuildRequires: scrollkeeper
 BuildRequires:  gnome-doc-utils
 BuildRequires:  intltool
 BuildRequires:  desktop-file-utils
+#gw libtool dep
+BuildRequires: dbus-glib-devel
 Conflicts: gnome-network <= 1.99.5
 Provides: gnome-netinfo
 Obsoletes: gnome-netinfo
