@@ -1,5 +1,5 @@
 %define name gnome-nettool
-%define version 2.26.0
+%define version 2.26.1
 %define release %mkrel 1
 
 Summary: GNOME interface for networking tools
@@ -47,7 +47,7 @@ traceroute and dig.
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 %find_lang %name --with-gnome
-for omf in %buildroot%_datadir/omf/*/*-??*.omf;do
+for omf in %buildroot%_datadir/omf/*/*[_-]??.omf;do
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed s!%buildroot!!)" >> %name.lang
 done
 
