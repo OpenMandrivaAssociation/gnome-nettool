@@ -1,5 +1,5 @@
 %define name gnome-nettool
-%define version 2.30.0
+%define version 2.31.6
 %define release %mkrel 1
 
 Summary: GNOME interface for networking tools
@@ -12,7 +12,7 @@ Group: Graphical desktop/GNOME
 Url: http://www.gnome.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libGConf2-devel
-BuildRequires: libglade2.0-devel
+BuildRequires: gtk+2-devel
 BuildRequires: libgtop2.0-devel
 BuildRequires: scrollkeeper
 BuildRequires:  gnome-doc-utils
