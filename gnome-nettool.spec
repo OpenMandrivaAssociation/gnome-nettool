@@ -27,7 +27,7 @@ tools, like ping, netstat, ifconfig, whois, traceroute, finger.
 
 %build
 %configure \
-	--disable-schemas-compile \
+	--disable-schemas-compile
 %make
 
 %install
