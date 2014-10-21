@@ -10,6 +10,7 @@ License:	GPLv2+ and GFDL
 Group:		Graphical desktop/GNOME
 BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
+BuildRequires:	rarian
 BuildRequires:	pkgconfig(gtk+-3.0) >= 2.90.4
 BuildRequires:	pkgconfig(gio-2.0) >= 2.25.10
 BuildRequires:	pkgconfig(gmodule-export-2.0)
