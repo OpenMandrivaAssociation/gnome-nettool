@@ -3,7 +3,7 @@
 Summary:	Network information tool for GNOME
 Name:		gnome-nettool
 Version:	3.2.0
-Release:	2
+Release:	3
 Url:		http://projects.gnome.org/gnome-network/
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 License:	GPLv2+ and GFDL
