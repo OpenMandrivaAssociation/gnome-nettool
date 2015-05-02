@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(gio-2.0) >= 2.25.10
 BuildRequires:	pkgconfig(gmodule-export-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(libgtop-2.0)
+BuildRequires:	itstool
 Requires:	whois
 Requires:	traceroute
 
