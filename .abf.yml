@@ -1,2 +1,4 @@
+removed_sources:
+  gnome-nettool-3.2.0.tar.xz: 9f1f53607464aa4ea16d3fa26cd71b6d869df32b
 sources:
-  "gnome-nettool-3.2.0.tar.xz": 9f1f53607464aa4ea16d3fa26cd71b6d869df32b
+  gnome-nettool-3.8.1.tar.xz: e40bc85ff71b64fcca11db444392c93d04d0094c
