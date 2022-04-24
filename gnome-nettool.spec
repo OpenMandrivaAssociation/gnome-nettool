@@ -42,10 +42,12 @@ tools, like ping, netstat, ifconfig, whois, traceroute, finger.
 %files -f %{name}.lang
 %doc AUTHORS NEWS README
 %{_bindir}/%{name}
+%{_iconsdir}/hicolor/scalable/apps/gnome-nettool-symbolic.svg
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/pixmaps/*.xpm
 %{_datadir}/%{name}/pixmaps/*.png
 %{_datadir}/%{name}/ui/%{name}.ui
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-nettool.gschema.xml
+%{_datadir}/metainfo/gnome-nettool.appdata.xml
 
