@@ -7,6 +7,7 @@ Release:	1
 Url:		http://projects.gnome.org/gnome-network/
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 # Upstream merge request (not yet merged) to fix compilation with meson 0.60+
+Patch0:   https://gitlab.gnome.org/GNOME/gnome-nettool/-/merge_requests/3.patch
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/GNOME
 BuildRequires:	meson
