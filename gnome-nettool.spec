@@ -2,12 +2,15 @@
 
 Summary:	Network information tool for GNOME
 Name:		gnome-nettool
-Version:	 3.8.1
-Release:	3
+Version:	42.0
+Release:	1
 Url:		http://projects.gnome.org/gnome-network/
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+# Upstream merge request (not yet merged) to fix compilation with meson 0.60+
+Patch0:   https://gitlab.gnome.org/GNOME/gnome-nettool/-/merge_requests/3.patch
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/GNOME
+BuildRequires:	meson
 BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
 BuildRequires:	rarian
@@ -25,35 +28,26 @@ GNOME Nettool is a frontend to various networking commandline
 tools, like ping, netstat, ifconfig, whois, traceroute, finger.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure \
-	--disable-schemas-compile
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
-
-desktop-file-install \
-	--vendor "" \
-	--delete-original \
-	--dir %{buildroot}%{_datadir}/applications \
-	--remove-category Network \
-	--add-category GNOME \
-	--add-category System \
-	--add-category Utility \
-		%{buildroot}%{_datadir}/applications/gnome-nettool.desktop
+%meson_install
 
 %find_lang %{name} --with-gnome
 
 %files -f %{name}.lang
 %doc AUTHORS NEWS README
 %{_bindir}/%{name}
+%{_iconsdir}/hicolor/scalable/apps/gnome-nettool-symbolic.svg
 %{_datadir}/icons/hicolor/*/apps/%{name}.*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/pixmaps/*.xpm
 %{_datadir}/%{name}/pixmaps/*.png
 %{_datadir}/%{name}/ui/%{name}.ui
 %{_datadir}/glib-2.0/schemas/org.gnome.gnome-nettool.gschema.xml
+%{_datadir}/metainfo/gnome-nettool.appdata.xml
 
