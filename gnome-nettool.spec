@@ -6,6 +6,7 @@ Version:	42.0
 Release:	1
 Url:		http://projects.gnome.org/gnome-network/
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+# Upstream merge request (not yet merged) to fix compilation with meson 0.60+
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/GNOME
 BuildRequires:	meson
@@ -26,7 +27,7 @@ GNOME Nettool is a frontend to various networking commandline
 tools, like ping, netstat, ifconfig, whois, traceroute, finger.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %meson
