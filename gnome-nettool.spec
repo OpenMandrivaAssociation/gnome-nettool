@@ -35,7 +35,7 @@ tools, like ping, netstat, ifconfig, whois, traceroute, finger.
 %meson_build
 
 %install
-%meson_ install
+%meson_install
 
 %find_lang %{name} --with-gnome
 
