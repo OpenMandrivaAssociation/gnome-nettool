@@ -2,12 +2,13 @@
 
 Summary:	Network information tool for GNOME
 Name:		gnome-nettool
-Version:	 3.8.1
-Release:	3
+Version:	42.0
+Release:	1
 Url:		http://projects.gnome.org/gnome-network/
 Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 License:	GPLv2+ and GFDL
 Group:		Graphical desktop/GNOME
+BuildRequires:	meson
 BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
 BuildRequires:	rarian
@@ -28,22 +29,11 @@ tools, like ping, netstat, ifconfig, whois, traceroute, finger.
 %setup -q
 
 %build
-%configure \
-	--disable-schemas-compile
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
-
-desktop-file-install \
-	--vendor "" \
-	--delete-original \
-	--dir %{buildroot}%{_datadir}/applications \
-	--remove-category Network \
-	--add-category GNOME \
-	--add-category System \
-	--add-category Utility \
-		%{buildroot}%{_datadir}/applications/gnome-nettool.desktop
+%meson_ install
 
 %find_lang %{name} --with-gnome
 
